@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Organizador de Tarefas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-1 flex justify-between items-center">
+      
+            
+            <div href="index.html" class="flex items-center hover">
+                <img src="assets/logo.png" alt="Logo Task Manager" class="h-20 w-20">
+                <span class="text-3xl font-bold ">Task Manager</span>
+            </div>
+
+            
+                <nav class="space-x-6">
+                    <a href="#" onclick="openModal()" class="bg-gray-100 text-gray-700 border border-red-500 hover: px-4 py-2 rounded-lg font-semibold transition">Contactar Vendas</a>
+                    <a href="login.html" class="text-gray-700 hover:text-gray-900 font-medium">Login</a>
+                    <a href="register.html" class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-semibold transition">
+                    Criar Conta
+                    </a>
+                </nav>
+
+        </div>
+
+    </header>
+
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-lg p-8 relative">
+        
+        
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        
+        <h2 class="text-2xl font-bold mb-6 text-center">Contactar Vendas</h2>
+        
+        <form class="space-y-4">
+        <div>
+            <label class="block text-sm font-medium">E-mail de Trabalho <a class="text-red-500">*</a></label>
+            <input type="email" class="w-full border rounded-lg px-4 py-2" placeholder="Seu e-mail">
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Primeiro Nome <a class="text-red-500">*</a></label>
+            <input type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Seu nome">
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Sobrenome <a class="text-red-500">*</a></label>
+            <input type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Seu sobrenome">
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Telefone <a class="text-red-500">*</a></label>
+            <input type="tel" class="w-full border rounded-lg px-4 py-2" placeholder="Seu telefone">
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Empresa <a class="text-red-500">*</a></label>
+            <input type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Nome da empresa">
+        </div>
+        <div>
+            <button type="submit" class="w-full bg-red-500 hover:bg-red-700 text-white py-3 rounded-lg shadow-lg transition">
+            Enviar
+            </button>
+        </div>
+        </form>
+
+        
+
+    <p class="text-xs text-gray-500 mt-4">
+      Ao enviar minhas informações, confirmo que li e entendi a <a href="PoliticaDePrivacidade.html" class="text-red-600 hover:underline">Política de Privacidade</a>.
+    </p>
+
+  </div>
+
+</div>
+
+  
+  <section class="container mx-auto px-6 py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      Organize suas Tarefas de forma <span class="text-red-500">simples e eficiente</span>
+    </h1>
+    <p class="text-gray-600 mb-8 text-lg">
+      Controle, acompanhe e finalize suas atividades. Tudo em um só lugar.
+    </p>
+
+    <div class="flex justify-center space-x-4">
+      <a href="register.html" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">
+        Comece Agora
+      </a>
+      <a href="login.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-lg font-medium transition">
+        Já tenho conta
+      </a>
+    </div>
+  </section>
+
+    <script>
+    function openModal() {
+        document.getElementById('contactModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('contactModal').classList.add('hidden');
+    }
+    </script>
+
+ 
+  <footer class="text-center text-gray-500 py-6">
+    © 2025 Task Manager. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
