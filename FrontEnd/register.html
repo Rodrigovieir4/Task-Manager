@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen text-gray-800 relative">
+
+    <a href="index.html" class="absolute top-4 left-4 flex items-center">
+                <img src="assets/logo.png" alt="Logo Task Manager" class="h-16 w-16">
+                <span class="text-2xl font-bold ">Task Manager</span>
+    </a>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md ">
+
+    
+
+            <h1 class="text-3xl font-bold mb-6 text-center">Criar Conta</h1>
+
+            <form action="tasks.html" method="POST" class="space-y-4">
+            
+            <div>
+                <label class="block text-sm font-medium">Nome completo</label>
+                <input type="text" name="nome" placeholder="Digite seu nome" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">E-mail</label>
+                <input type="email" name="email" placeholder="Digite seu e-mail" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Senha</label>
+                <input type="password" name="senha" placeholder="Crie uma senha" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Confirmar Senha</label>
+                <input type="password" name="confirmarSenha" placeholder="Repita a senha" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 outline-none">
+            </div>
+
+            <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition">
+                Criar Conta
+            </button>
+            </form>
+
+            <p class="text-xs text-gray-500 mt-4">
+            Ao clicar no botão acima, confirmo que li e entendi a <a href="terms.html" class="text-red-600 hover:underline">Política de Privacidade</a>.
+            </p>
+
+            <p class="text-sm text-center text-gray-600 mt-4">
+            Já tem uma conta? 
+            <a href="login.html" class="text-red-500 hover:underline font-medium">Entrar</a>
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>

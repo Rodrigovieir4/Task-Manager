@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Área de trabalho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    
+    <header class="bg-white shadow-lg">
+        <div class="container flex justify-between items-center">
+      
+            
+            <a class="flex left-4 top-4 items-center hover">
+                <img src="assets/logo.png" alt="Logo Task Manager" class="hover h-16 w-16">
+            </a>
+
+        </div>
+
+    </header>
+
+
+  
+  <main class="p-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      
+      <div class="bg-gray-50 rounded-lg shadow-md p-4">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">📋 A Fazer</h2>
+        <div class="space-y-4">
+          
+          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
+            <h3 class="font-bold">Criar tela de login</h3>
+            <p class="text-sm text-gray-500">Prioridade: Alta</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
+            <h3 class="font-bold">Fazer integração com API</h3>
+            <p class="text-sm text-gray-500">Prioridade: Média</p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="bg-gray-50 rounded-lg shadow-md p-4">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">🚧 Em Progresso</h2>
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
+            <h3 class="font-bold">Criar página de Registro</h3>
+            <p class="text-sm text-gray-500">Prioridade: Alta</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="bg-gray-50 rounded-lg shadow-md p-4">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">✅ Concluído</h2>
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
+            <h3 class="font-bold">Criar Política de Privacidade</h3>
+            <p class="text-sm text-gray-500">Finalizado ontem</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
