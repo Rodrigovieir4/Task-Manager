@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks - Área de trabalho</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks - Área de Trabalho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen">
-    
-    <header class="bg-white shadow-lg">
-        <div class="container flex justify-between items-center">
-      
-            
-            <a class="flex left-4 top-4 items-center hover">
-                <img src="assets/logo.png" alt="Logo Task Manager" class="hover h-16 w-16">
-            </a>
 
-        </div>
+  <!-- Sidebar Oculta -->
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-xl transform -translate-x-full transition-transform duration-300 z-40 p-6">
 
-    </header>
+    <!-- Botão Fechar -->
+    <button onclick="closeSidebar()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl">
+      &times;
+    </button>
 
+    <h2 class="text-xl font-bold mb-4">Nova Área de Trabalho</h2>
 
-  
+    <form action="#" method="POST" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Nome da Área</label>
+        <input type="text" name="workspaceName" placeholder="Ex: Marketing, Desenvolvimento..." class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 outline-none">
+      </div>
+
+      <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg font-semibold transition">
+        Criar Área
+      </button>
+    </form>
+
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4 py-2 relative">
+
+      <!-- Botão Hamburguer Vermelho -->
+      <button onclick="openSidebar()" class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center ml-4">
+        <img src="assets/logo.png" alt="Logo Task Manager" class="h-16 w-16">
+      </a>
+
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
   <main class="p-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-      
+      <!-- Coluna: A Fazer -->
       <div class="bg-gray-50 rounded-lg shadow-md p-4">
         <h2 class="text-xl font-semibold mb-4 text-gray-700">📋 A Fazer</h2>
         <div class="space-y-4">
-          
           <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
             <h3 class="font-bold">Criar tela de login</h3>
             <p class="text-sm text-gray-500">Prioridade: Alta</p>
           </div>
-
           <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
             <h3 class="font-bold">Fazer integração com API</h3>
             <p class="text-sm text-gray-500">Prioridade: Média</p>
@@ -42,7 +69,7 @@
         </div>
       </div>
 
-     
+      <!-- Coluna: Em Progresso -->
       <div class="bg-gray-50 rounded-lg shadow-md p-4">
         <h2 class="text-xl font-semibold mb-4 text-gray-700">🚧 Em Progresso</h2>
         <div class="space-y-4">
@@ -53,7 +80,7 @@
         </div>
       </div>
 
-      
+      <!-- Coluna: Concluído -->
       <div class="bg-gray-50 rounded-lg shadow-md p-4">
         <h2 class="text-xl font-semibold mb-4 text-gray-700">✅ Concluído</h2>
         <div class="space-y-4">
@@ -66,5 +93,9 @@
 
     </div>
   </main>
+
+  <!-- JS externo -->
+  <script src="js/tasks.js"></script>
+
 </body>
 </html>
