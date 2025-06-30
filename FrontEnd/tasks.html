@@ -8,10 +8,10 @@
 </head>
 <body class="bg-gray-100 min-h-screen">
 
-  <!-- Sidebar Oculta -->
+  
   <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-xl transform -translate-x-full transition-transform duration-300 z-40 p-6">
 
-    <!-- Botão Fechar -->
+    
     <button onclick="closeSidebar()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl">
       &times;
     </button>
@@ -31,18 +31,18 @@
 
   </div>
 
-  <!-- Header -->
+  
   <header class="bg-white shadow-lg">
     <div class="container mx-auto flex justify-between items-center px-4 py-2 relative">
 
-      <!-- Botão Hamburguer Vermelho -->
+      
       <button onclick="openSidebar()" class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
-      <!-- Logo -->
+      
       <a href="index.html" class="flex items-center ml-4">
         <img src="assets/logo.png" alt="Logo Task Manager" class="h-16 w-16">
       </a>
@@ -50,51 +50,23 @@
     </div>
   </header>
 
-  <!-- Conteúdo Principal -->
+
   <main class="p-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      <!-- Coluna: A Fazer -->
-      <div class="bg-gray-50 rounded-lg shadow-md p-4">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">📋 A Fazer</h2>
-        <div class="space-y-4">
-          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
-            <h3 class="font-bold">Criar tela de login</h3>
-            <p class="text-sm text-gray-500">Prioridade: Alta</p>
-          </div>
-          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
-            <h3 class="font-bold">Fazer integração com API</h3>
-            <p class="text-sm text-gray-500">Prioridade: Média</p>
-          </div>
+    <div id="colunas" class="grid grid-cols-1 md:grid-cols-8 gap-6">
+      <div class="mb-4 flex gap-4">
+        <div id="adicionarLista" class="bg-gray-200 p-4 rounded-lg h-fit cursor-pointer hover:bg-gray-300" onclick="mostrarFormulario()">
+          <span class="text-gray-700 font-semibold">+ Adicionar outra lista</span>
+        </div>
+        <div id="formNovaLista" class="bg-gray-200 p-4 rounded-lg h-fit hidden">
+          <input type="text" id="nomeLista" placeholder="Digite o nome da lista..." class="w-full border border-red-400 rounded p-2 mb-2 outline-none focus:ring-2 focus:ring-red-400">
+          <div class="flex gap-2">
+            <button onclick="criarLista()" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-800">Adicionar Lista</button>
+            <button onclick="cancelarCriacao()" class="text-xl font-bold text-gray-600 hover:text-red-500">&times;</button>
+          </div>  
         </div>
       </div>
-
-      <!-- Coluna: Em Progresso -->
-      <div class="bg-gray-50 rounded-lg shadow-md p-4">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">🚧 Em Progresso</h2>
-        <div class="space-y-4">
-          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
-            <h3 class="font-bold">Criar página de Registro</h3>
-            <p class="text-sm text-gray-500">Prioridade: Alta</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Coluna: Concluído -->
-      <div class="bg-gray-50 rounded-lg shadow-md p-4">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">✅ Concluído</h2>
-        <div class="space-y-4">
-          <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer">
-            <h3 class="font-bold">Criar Política de Privacidade</h3>
-            <p class="text-sm text-gray-500">Finalizado ontem</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </main>
-
-  <!-- JS externo -->
   <script src="js/tasks.js"></script>
 
 </body>
